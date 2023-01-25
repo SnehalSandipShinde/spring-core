@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="employee" class="com.prowings.constructorinjection.Employee" autowire="constructor">
+	<constructor-arg name="id" value="12"></constructor-arg>
+	<constructor-arg name="name" value="Komal"></constructor-arg>
+	<constructor-arg name="dept" value="IT"></constructor-arg>
+	</bean>
+	
+	<bean name="address" class="com.prowings.beans.Address">
+	<constructor-arg name="cityName" value="Pune"></constructor-arg>
+	<constructor-arg name="stateName" value="MH"></constructor-arg>
+	<constructor-arg name="pinCode" value="12345"></constructor-arg>
+	
+	</bean>
+</beans>

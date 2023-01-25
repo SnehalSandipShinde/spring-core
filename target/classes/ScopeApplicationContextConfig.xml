@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="engine" class="com.prowings.beansscope.Engine">
+	<property name="type" value="v12"/>
+	<property name="capacity" value="1200"/>
+	</bean>
+	
+	<bean name="car" class="com.prowings.beansscope.Car" scope="prototype">
+	<!-- <property name="engine" ref="engine"></property> -->
+	<lookup-method name="createEngine" bean="engine"/>
+	<property name="make" value="2016"></property>
+	<property name="type" value="v12"/>
+	</bean>
+</beans>
