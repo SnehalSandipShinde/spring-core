@@ -21,7 +21,6 @@ public class TestPersonScope {
 		
 		System.out.println(p);
 		
-		
 	}
 
 }
